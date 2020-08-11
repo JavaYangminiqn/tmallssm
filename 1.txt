@@ -1,0 +1,24 @@
+category 分类表
+
+
+create table referral  超连接表
+    rid number(11) primary key ,  主键
+    rtext varchar2(50),  连接文字
+    rlinl varchar2(255)  链接地址
+
+create table product(
+        pid number(11) primary key,
+        panem varchar2(100),  商品名称
+        plitle varchar2(100), 商品小标题
+        pprice number(11),    价格
+        psales number(11),    销量
+        pstock number(11),    库存
+        cid number(11),
+        constraint fk_product_cid foreign key (cid) references category(cid)
+
+create table property(       属性表
+        pno int(11) primary key ,   属性id
+        prname varchar(255),        属性名称
+        pid int(11),
+        constraint fk_property foreign key (pid) references product (pid)
+        );
