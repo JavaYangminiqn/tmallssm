@@ -14,10 +14,11 @@
 
         <!--放行静态资源image,css,js-->
         <!-- mapping="/image/**"是uri的路径,其中**表示放行image目录下所有的文件及子目录下的文件-->
-        <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+        <mvc:resources mapping="/products/**" location="/WEB-INF/products/"/>
         <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
-        <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
-        <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/"/>
+        <mvc:resources mapping="/skins/**" location="/WEB-INF/skins/"/>
+        <mvc:resources mapping="/Plugins/**" location="/WEB-INF/Plugins/"/>
+        <mvc:resources mapping="/layer/**" location="/WEB-INF/layer/"/>
         <!-- html视图解析器 -->
         <!-- 配置freeMarker的模板路径 -->
         <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
